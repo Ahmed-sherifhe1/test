@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    text-transform: none;
+  }
+  
+  body {
+    background-color: var(--section-background-color);
+  }
+  
+  :root {
+    --main-background-color: #FEE9FF;
+    --main-text-color: #030303;
+    --secondary-text-color: #92929D;
+    --purple-accent: #7B1D80;
+    --section-background-color: #FCFCFC;
+    --main-bg-nav-color: #ffff;
+    --box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.15);
+    --border-bottom: 1px solid var(--main-background-color);
+    --border: 1px solid var(--secondary-text-color);
+    --main-border-radius: 12px;
+    --second-border-radius: 10px;
+    --third-border-radius: 8px;
+    --padding: 60px 104px;
+    --padding-left: 12px;
+    --padding-right: 12px;
+    --padding-all: 12px;
+    --transation: 0.4s;
+  }
+  
+  .scroll-top {
+    height: 100%;
+    width: 7px;
+    background-color: var(--purple-accent);
+    scale: 1 0;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    transform-origin: top;
+    animation: scroll-moving linear;
+    animation-timeline: scroll();
+    box-shadow: 0px 0px 20px 0px var(--purple-accent);
+  }
+  
+  @keyframes scroll-moving {
+    to {
+      scale: 1;
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    .scroll-top {
+      height: 7px;
+      width: 100%;
+      scale: 0 1;
+      top: 0;
+      transform-origin: left;
+    }
+  }
+  :root {
+    --main-background-color: #FEE9FF;
+    --main-text-color: #030303;
+    --secondary-text-color: #92929D;
+    --purple-accent: #7B1D80;
+    --section-background-color: #FCFCFC;
+    --main-bg-nav-color: #ffff;
+    --box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.15);
+    --border-bottom: 1px solid var(--main-background-color);
+    --border: 1px solid var(--secondary-text-color);
+    --main-border-radius: 12px;
+    --second-border-radius: 10px;
+    --third-border-radius: 8px;
+    --padding: 60px 104px;
+    --padding-left: 12px;
+    --padding-right: 12px;
+    --padding-all: 12px;
+    --transation: 0.4s;
+  }
+  
+  .fa-bars-staggered, .fa-x {
+    color: var(--main-text-color) !important;
+  }
+  
+  .navbar {
+    background: var(--main-bg-nav-color) !important;
+    border-bottom: var(--border-bottom);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .navbar ul li {
+    padding-left: 5px !important;
+  }
+  
+  .navbar-nav .active a {
+    background-color: var(--purple-accent);
+    color: var(--main-bg-nav-color) !important;
+    border-radius: var(--main-border-radius);
+  }
+  
+  .nav-item a {
+    color: var(--main-text-color) !important;
+    transition: var(--transation) !important;
+    font-size: 0.93rem !important;
+  }
+  
+  .nav-item a:hover {
+    background-color: var(--purple-accent);
+    color: var(--main-bg-nav-color) !important;
+    border-radius: var(--main-border-radius);
+  }
+  
+  .dropdown-menu {
+    padding: 12px !important;
+    box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.15);
+    border-radius: var(--second-border-radius) !important;
+    background-color: var(--section-background-color) !important;
+  }
+  
+  .dropdown-item {
+    border-radius: var(--main-border-radius);
+    border: var(--border) !important;
+    margin-bottom: 10px !important;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    transition: var(--transation) !important;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(123, 29, 128, 0.1) !important;
+    border: 1px solid var(--purple-accent) !important;
+    color: var(--purple-accent) !important;
+  }
+  
+  .form-inline input {
+    border: 1px solid var(--purple-accent) !important;
+    outline: none !important;
+    padding: 8px !important;
+    border-radius: var(--third-border-radius) !important;
+    /* margin-bottom: 8px; */
+  }
+  
+  .btn {
+    color: var(--purple-Accent);
+    text-align: center;
+    font-family: Cairo;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--navbar-color);
+    border: 1px solid var(--purple-accent) !important;
+    outline: none !important;
+    border-radius: var(--third-border-radius) !important;
+    transition: var(--transation);
+  }
+  
+  .btn:hover {
+    color: var(--section-background-color);
+    background-color: var(--purple-accent);
+  }
+  
+  .btn:focus {
+    background-color: var(--purple-accent) !important;
+    color: var(--section-background-color);
+    box-shadow: none !important;
+  }
+  
+  .form-inline input:focus {
+    box-shadow: none !important;
+  }
+  
+  ::-moz-placeholder {
+    color: var(--secondary-text-color) !important;
+  }
+  
+  ::placeholder {
+    color: var(--secondary-text-color) !important;
+  }
+  
+  .fa-search {
+    color: var(--purple-accent) !important;
+    margin-left: -30px;
+  }
+  
+  .fa-blog,
+  .fa-people-group,
+  .fa-star {
+    border-radius: var(--third-border-radius) !important;
+    border: var(--border) !important;
+    padding: 4px !important;
+  }
+  
+  .fa-arrow-right {
+    border: var(--border) !important;
+    border-radius: 54px !important;
+    padding: 4px !important;
+    display: none;
+  }
+  
+  .dropdown-item:hover .fa-arrow-right {
+    display: inline;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .navbar-nav .active a {
+      margin: 10px 0px !important;
+    }
+    .nav-item a {
+      width: -moz-fit-content;
+      width: fit-content;
+      padding: 8px !important;
+    }
+    .dropdown-menu {
+      width: -moz-fit-content !important;
+      width: fit-content !important;
+    }
+    .dropdown-menu .dropdown-item {
+      width: 100% !important;
+    }
+    .btn {
+      width: 100% !important;
+    }
+  }
+  @media (min-width: 760px) and (max-width: 940px) {
+    .navbar-nav .active a {
+      margin: 10px 0px !important;
+    }
+    .nav-item a {
+      width: -moz-fit-content;
+      width: fit-content;
+      padding: 8px !important;
+    }
+    .dropdown-menu {
+      width: -moz-fit-content !important;
+      width: fit-content !important;
+    }
+    .form-inline input {
+      width: 100% !important;
+      margin-bottom: 12px !important;
+    }
+    .btn {
+      margin-bottom: 12px !important;
+      width: 100% !important;
+    }
+    .dropdown-menu .dropdown-item {
+      width: 100% !important;
+    }
+    .fa-search {
+      margin-top: -10px !important;
+    }
+  }
+  /* start footer */
+  .rectangale {
+    padding: var(--padding-all) !important;
+    background-color: var(--purple-accent) !important;
+    width: 113px;
+    height: 81px;
+  }
+  
+  footer {
+    width: 100%;
+  }
+  
+  footer hr {
+    border: 0.1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  footer .right img {
+    padding-bottom: 15px;
+  }
+  
+  .txt {
+    font-size: 15px;
+    color: var(--secondary-text-color);
+  }
+  
+  footer .top,
+  footer .left {
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+  }
+  
+  footer .top {
+    padding: 20px 84px 20px 84px;
+  }
+  
+  footer .right {
+    width: 50%;
+  }
+  
+  footer .left {
+    width: 75%;
+  }
+  
+  footer .right .links div,
+  .loc {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .right .links div a {
+    padding-top: 12px;
+  }
+  
+  footer a,
+  footer a:hover {
+    color: var(--main-text-color);
+  }
+  
+  .maps,
+  .maps:hover {
+    color: var(--purple-accent);
+  }
+  
+  footer .links i {
+    color: var(--purple-accent);
+    border: 2px solid var(--purple-accent);
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+  
+  footer h6 {
+    color: var(--purple-accent);
+    font-weight: bold;
+    padding-bottom: 25px;
+  }
+  
+  footer .center {
+    padding: 10px 84px 10px 74px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer .center .social {
+    text-decoration: none;
+  }
+  
+  footer .center .privacy {
+    padding-top: 6px;
+  }
+  
+  footer .bottom {
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 0px 104px 24px 104px;
+  }
+  
+  /* end footer */
+  /* extra small screens */
+  main div header div {
+    padding: 6dvh 0 3dvh !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+  main div header div h2 {
+    font-size: 2.3rem !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+  }
+  main div header div h2 .main-effect {
+    display: inline-block;
+    color: var(--purple-accent);
+    border-right: 0px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    animation: showing-text 2s, cursor 0.4s step-end alternate;
+  }
+  main div header div p {
+    margin: 0 !important;
+    color: var(--secondary-text-color) !important;
+    font-weight: 500 !important;
+    transform: translateY(200%) !important;
+    transition: 0.7s !important;
+  }
+  main div section#developers div div.info {
+    overflow: hidden !important;
+  }
+  main div section#developers div div.info h2 {
+    font-size: 2.3rem !important;
+    font-weight: 700 !important;
+    transition: 0.7s !important;
+  }
+  main div section#developers div div.info .developersTitle {
+    transform: translateY(-900%);
+  }
+  main div section#developers div div.info .dev-describtion {
+    width: 82% !important;
+    color: var(--secondary-text-color) !important;
+    font-size: 0.83rem !important;
+  }
+  main div section#developers div div.info .services {
+    color: var(--main-text-color) !important;
+    background-color: var(--main-background-color) !important;
+    display: inline-block;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    margin: 2vh 0 0 !important;
+  }
+  main div section#developers div div.details {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2% !important;
+  }
+  main div section#developers div div.details .t1, main div section#developers div div.details .t2, main div section#developers div div.details .t3 {
+    width: 32% !important;
+    margin: 3dvh 0 !important;
+  }
+  main div section#developers div div.details .t4, main div section#developers div div.details .t5 {
+    width: 49% !important;
+  }
+  main div section#developers div div.details .track fieldset {
+    outline-color: #fee9ff !important;
+    border: 3px solid #fee9ff !important;
+    padding: 5px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    transition: 0.7s !important;
+  }
+  main div section#developers div div.details .track fieldset:hover {
+    background-color: var(--purple-accent) !important;
+    color: #fee9ff !important;
+  }
+  main div section#developers div div.details .track fieldset:hover p {
+    color: var(--main-background-color) !important;
+  }
+  main div section#developers div div.details .track fieldset:hover legend {
+    box-shadow: 0px 0px 10px 0px var(--purple-accent) !important;
+  }
+  main div section#developers div div.details .track fieldset legend {
+    width: auto !important;
+    margin: 0 auto !important;
+    padding: 25px !important;
+    background-color: #fee9ff !important;
+    border-radius: 12px !important;
+    position: relative !important;
+  }
+  main div section#developers div div.details .track fieldset legend svg {
+    background-color: #fee9ff !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  main div section#developers div div.details .track fieldset p {
+    color: var(--secondary-text-color) !important;
+    font-size: 0.63rem !important;
+    width: 80% !important;
+    margin: 2vh auto !important;
+  }
+  main div section#non-tech .container-non-tech {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  main div section#non-tech .container-non-tech div:first-child {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+  }
+  main div section#non-tech .container-non-tech div:first-child h2 {
+    font-size: 2.3rem !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+  }
+  main div section#non-tech .container-non-tech div:first-child img {
+    padding: 12px !important;
+    background-color: var(--main-background-color) !important;
+    border-radius: 8px !important;
+  }
+  main div section#non-tech .container-non-tech div:nth-child(2) p {
+    color: var(--secondary-text-color) !important;
+    font-size: 0.83rem !important;
+    font-weight: 400 !important;
+  }
+  main hr {
+    margin: 4vh 0 !important;
+    height: 2px !important;
+    background-color: var(--secondary-text-color) !important;
+  }
+  
+  @media (max-width: 767px) {
+    main div {
+      text-align: center !important;
+    }
+    main div header div h2 {
+      font-size: 2rem !important;
+    }
+    main div header div p {
+      font-size: 0.7rem !important;
+    }
+    main div section#developers div div.info .dev-describtion {
+      width: 100% !important;
+      font-size: 0.73rem !important;
+    }
+    main div section#developers div div.info .services {
+      width: 100% !important;
+      margin: 2vh auto 0 !important;
+    }
+    main div section#developers div div.details {
+      margin-top: 1dvh !important;
+    }
+    main div section#developers div div.details .track {
+      width: 100% !important;
+      margin: 1dvh 0 !important;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    main div header div h2 {
+      font-size: 1.3rem !important;
+    }
+    main div header div p {
+      font-size: 0.43rem !important;
+    }
+    main div section#developers div div.info h2 {
+      font-size: 1.3rem !important;
+    }
+    main div section#developers div div.info .dev-describtion {
+      font-size: 0.43rem !important;
+    }
+    main div section#developers div div.info .services {
+      width: 28% !important;
+      font-size: 0.63rem !important;
+    }
+    main div section#developers div div.details .track fieldset p {
+      font-size: 0.325rem !important;
+      margin: 1vh auto !important;
+    }
+    main div section#developers div div.details .track fieldset h4 {
+      font-size: 0.7rem !important;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    main div header div p {
+      font-size: 0.57rem !important;
+    }
+    main div section#developers div div.info .dev-describtion {
+      width: 82% !important;
+      color: var(--secondary-text-color) !important;
+      font-size: 0.57rem !important;
+    }
+    main div section#developers div div.info .services {
+      font-size: 0.66rem !important;
+    }
+    main div section#developers div div.details .track fieldset p {
+      font-size: 0.435rem !important;
+    }
+  }
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes showing-text {
+    from {
+      width: 0;
+      border-right: 5px solid;
+    }
+  }
+  .show1 {
+    transform: translateY(0%) !important;
+  }/*# sourceMappingURL=main.css.map */

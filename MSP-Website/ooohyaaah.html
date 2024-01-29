@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #splash{
+    height: 100%;
+    width:100%;
+    background-image: -webkit-radial-gradient(30%,#7B1D80,#030303);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s ease;
+    z-index: 9999999999999999999999999999;
+}
+#splash img{
+    width: 50%;
+    /* transform: scale(0.5); */
+    transition: 0.9s ease;
+    animation: alternate-reverse infinite 2s zoom;
+}
+.fade{opacity:0;}
+.hidden {
+    display: none !important;
+}
+@keyframes zoom {
+    from{
+        transform:scale(0.5)
+    }
+    to{
+        transform:scale(1)
+    }
+    
+}
+</style>
+<body>
+    <div id="splash">
+        <img src="./assests/splash-logo.png" alt="logo-image" class="logo">
+    </div>
+    <script>
+
+function checkNetworkSpeed() { 
+    
+    if (navigator.onLine) {
+        setTimeout(() => {
+            document.getElementById("splash").classList.toggle("fade");
+            document.getElementById("splash").classList.add("hidden");
+        }, 2000);
+    }
+    else{
+        document.getElementById("splash").style.display = "flex";
+    }
+}
+
+setTimeout( checkNetworkSpeed() ,4000);
+    </script>
+</body>
+</html>

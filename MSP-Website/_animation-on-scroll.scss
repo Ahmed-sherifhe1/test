@@ -1,0 +1,12 @@
+.show {
+    transform: translate(0%) !important;
+    animation: appear 2s alternate forwards !important;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0 !important;
+    }
+    to {
+      opacity: 100 !important;
+    }
+  }
